@@ -1,0 +1,85 @@
+body {
+    background-color: #433f3fcf; 
+}
+header {
+    background-color: #000; 
+    padding: 10px 0;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.RegistrationBox {
+    background-color: #736c6cd0;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.RegistrationContinor {
+    background-color: #9d9696d6;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    border: 1px solid #ddd; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+input[type="text"],label,select
+ {
+    background-color: hsla(0, 33%, 95%, 0.839);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+button {
+    padding: 5px;
+    background-color: #28a745; 
+    color: white; 
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; 
+}
+
+button:hover {
+    background-color: #218838;
+}
+.tableBox{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+}
+#table,th,td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: right;
+    color: #f0f0f0;
+   
+}
