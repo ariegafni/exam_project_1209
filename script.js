@@ -6,13 +6,10 @@ const inputTime = document.querySelector('#inputTime');
 const Activ = document.querySelector('#Activ'); 
 
 const addPersonnelBTN = document.querySelector('#addPersonnelBTN');
-const table = document.querySelector('#table'); 
 const tbody = document.querySelector("#tbody"); 
-
 
 addPersonnelBTN.addEventListener('click', function() {
     const tr = document.createElement('tr');
-    
     
     const nameTD = document.createElement('td');
     const rankTD = document.createElement('td');
@@ -22,7 +19,6 @@ addPersonnelBTN.addEventListener('click', function() {
     const statusTD = document.createElement('td');
     const actionsTD = document.createElement('td');
 
-    
     const deleteBTN = document.createElement('button');
     deleteBTN.className = 'deleteBTN';
     deleteBTN.textContent = 'delete';
@@ -33,22 +29,19 @@ addPersonnelBTN.addEventListener('click', function() {
 
     const missionBTN = document.createElement('button');
     missionBTN.className = 'missionBTN';
-    missionBTN.textContent = ' mission on';
+    missionBTN.textContent = 'mission on';
 
-    
-    nameTD.textContent = inputName;
-    rankTD.textContent = inputRank;
-    positionTD.textContent = inputPosison;
-    platoonTD.textContent = inputplatoon;
-    timeTD.textContent = inputTime;
-    statusTD.textContent = Activ;
+    nameTD.textContent = inputName.value;
+    rankTD.textContent = inputRank.value;
+    positionTD.textContent = inputPosison.value;
+    platoonTD.textContent = inputplatoon.value;
+    timeTD.textContent = inputTime.value;
+    statusTD.textContent = Activ.value;
 
-    
     actionsTD.appendChild(deleteBTN);
     actionsTD.appendChild(updateBTN);
     actionsTD.appendChild(missionBTN);
 
-    
     tr.appendChild(nameTD);
     tr.appendChild(rankTD);
     tr.appendChild(positionTD);
@@ -57,20 +50,14 @@ addPersonnelBTN.addEventListener('click', function() {
     tr.appendChild(statusTD);
     tr.appendChild(actionsTD);
 
-   
     tbody.appendChild(tr);
 
-
-    
-    
     saveSoldierData();
-    
- 
+
     deleteBTN.addEventListener('click', () => deleteRow(tr));
     updateBTN.addEventListener('click', () => updateRow(tr));
     missionBTN.addEventListener('click', () => startMission(missionBTN, inputTime.value));
 });
-
 
 function saveSoldierData() {
     const soldiers = [];
@@ -91,7 +78,6 @@ function saveSoldierData() {
     localStorage.setItem('soldiers', JSON.stringify(soldiers));
 }
 
-
 function loadSoldierData() {
     const soldiers = JSON.parse(localStorage.getItem('soldiers')) || [];
     
@@ -106,18 +92,17 @@ function loadSoldierData() {
         const statusTD = document.createElement('td');
         const actionsTD = document.createElement('td');
 
-        
         const deleteBTN = document.createElement('button');
         deleteBTN.className = 'deleteBTN';
-        deleteBTN.textContent = 'מחק';
+        deleteBTN.textContent = 'delete';
 
         const updateBTN = document.createElement('button');
         updateBTN.className = 'updateBTN';
-        updateBTN.textContent = 'עדכן';
+        updateBTN.textContent = 'update';
 
         const missionBTN = document.createElement('button');
         missionBTN.className = 'missionBTN';
-        missionBTN.textContent = 'הפעל משימה';
+        missionBTN.textContent = 'mission on';
 
         nameTD.textContent = soldier.name;
         rankTD.textContent = soldier.rank;
@@ -140,16 +125,13 @@ function loadSoldierData() {
 
         tbody.appendChild(tr);
 
-        
         deleteBTN.addEventListener('click', () => deleteRow(tr));
         updateBTN.addEventListener('click', () => updateRow(tr));
         missionBTN.addEventListener('click', () => startMission(missionBTN, soldier.time));
     });
 }
 
-
 window.onload = loadSoldierData;
-
 
 function deleteRow(row) {
     tbody.removeChild(row);
@@ -159,7 +141,6 @@ function deleteRow(row) {
 function updateRow(row) {
     
 }
-
 
 function startMission(button, time) {
     button.textContent = 'Mission In Progress (${time}s);'

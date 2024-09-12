@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport">
-        <script defer src="script.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <header>BATTALION FORCE MANAGEMENT</header>
-    <body>
-        <div class="RegistrationBox" >
-            <div class="RegistrationContinor">
-                <div class="formGroup">
-                    <input type="text" id="inputName " placeholder="full Name ">
-                    <input type="text" id="inputRank " placeholder="Rank">
-                    <input type="text" id="inputPosison " placeholder="Posison ">
-                    <input type="text" id="inputplatoon " placeholder="Paltםon ">
-                    <input type="text" id="inputTime " placeholder="Mission Time (seconds) ">
-                    <select id="Activ">
-                        <option value="Activ">Activ</option>
-                        <option value="Retired">Retired</option>
-                      </select>
-                </div>
-                <button id="addPersonnelBTN">Add Personnel </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>BATTALION FORCE MANAGEMENT</header>
+<body>
+    <div class="RegistrationBox">
+        <div class="RegistrationContinor">
+            <div class="formGroup">
+                <input type="text" id="inputName" placeholder="full Name">
+                <input type="text" id="inputRank" placeholder="Rank">
+                <input type="text" id="inputPosison" placeholder="Posison">
+                <input type="text" id="inputplatoon" placeholder="Platoon">
+                <input type="text" id="inputTime" placeholder="Mission Time (seconds)">
+                <select id="Activ">
+                    <option value="Activ">Active</option>
+                    <option value="Retired">Retired</option>
+                </select>
             </div>
-            </div>
-
-        <div class="tableBox">
-            <h1>FORCES OVERVIEW </h1>
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th id="fullName">full Name</th>
-                        <th id="Rank">Rank</th>
-                        <th id="Posison">Posison</th>
-                        <th id="Palton">Palton</th>
-                        <th id="Status">Status</th>
-                        <th id="Actions">Actions</th>
-                    </tr>
-                    <tbody id="tbody">
-
-                    </tbody>
-
-                </thead>
-                <tbody id="tbody">
-                    
-                </tbody>
-
-              </table>
+            <button id="addPersonnelBTN">Add Personnel</button>
         </div>
+    </div>
 
-         
-    </body>
+    <div class="tableBox">
+        <h1>FORCES OVERVIEW</h1>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th id="fullName">full Name</th>
+                    <th id="Rank">Rank</th>
+                    <th id="Posison">Posison</th>
+                    <th id="Palton">Platoon</th>
+                    <th id="Status">Status</th>
+                    <th id="Actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>

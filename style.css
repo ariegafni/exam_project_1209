@@ -83,3 +83,10 @@ button:hover {
     color: #f0f0f0;
    
 }
+.deleteBTN{
+    background-color: red;
+}
+
+.updateBTN{
+    background-color: aqua;
+}
